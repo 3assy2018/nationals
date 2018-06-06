@@ -1,9 +1,6 @@
 # nationals
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
 [![Total Downloads][ico-downloads]][link-downloads]
-[![Build Status][ico-travis]][link-travis]
-[![StyleCI][ico-styleci]][link-styleci]
 
 Laravel Nationals is an out of the box package for Laravel Framework Developers to solve the problem of finding all countries and regions around the world easily to be used in various ways.
 ## Installation
