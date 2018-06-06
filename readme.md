@@ -8,7 +8,7 @@ Laravel Nationals is an out of the box package for Laravel Framework Developers 
 Via Composer
 
 ``` bash
-$ composer require 3assy2018/nationals:dev-master
+$ composer require 3assy2018/nationals
 ```
 
 ## Usage
