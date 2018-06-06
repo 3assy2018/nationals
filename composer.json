@@ -1,0 +1,44 @@
+{
+    "name": "3assy2018/nationals",
+    "description": "a package made for Laravel Developers To Add Database Of All Countries And Regions Around The World",
+    "license": "MIT",
+    "version": "1.0",
+    "authors": [
+        {
+            "name": "Mohamed El-Assy",
+            "email": "3assy@diva-lab.com"
+        }
+    ],
+    "minimum-stability" : "stable",
+    "prefer-stable": true,
+    "homepage": "https://github.com/3assy2018/nationals",
+    "keywords": ["Laravel", "nationals"],
+    "require": {
+        "illuminate/support": "~5",
+        "ixudra/curl": "6.16.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~6.0",
+        "orchestra/testbench": "~3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "m3assy\\nationals\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "m3assy\\nationals\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "m3assy\\nationals\\nationalsServiceProvider"
+            ],
+            "aliases": {
+                "nationals": "m3assy\\nationals\\Facades\\nationals"
+            }
+        }
+    }
+}
