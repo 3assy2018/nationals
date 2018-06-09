@@ -2,6 +2,6 @@
 
 return [
     'battuta' => [
-        'apiKey' => '85d97f67ff7fd1935b314ec4f884ad33', // https://battuta.medunes.net API key
+        'apiKey' => '00000000000000000000000000000000', // https://battuta.medunes.net API key
     ],
 ];
