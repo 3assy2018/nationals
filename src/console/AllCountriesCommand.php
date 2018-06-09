@@ -41,7 +41,7 @@ class AllCountriesCommand extends Command
     public function handle()
     {
     		Artisan::call("migrate");
-    		$curl_response= Curl::to('https://battuta.medunes.net/api/country/all/?key=85d97f67ff7fd1935b314ec4f884ad33')->get();
+    		$curl_response= Curl::to('https://battuta.medunes.net/api/country/all/?key=' . config('nationals.battuta.apiKey'))->get();
         $all= json_decode($curl_response, true);
         foreach ($all as $country){
         	Country::create($country);

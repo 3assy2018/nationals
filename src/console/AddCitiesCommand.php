@@ -46,7 +46,7 @@ class AddCitiesCommand extends Command
         if($all == '*'){
         	$countries= Country::all();
         	foreach ($countries as $country){
-						$response= Curl::to("https://battuta.medunes.net/api/region/{$country->code}/all/?key=85d97f67ff7fd1935b314ec4f884ad33")->get();
+						$response= Curl::to("https://battuta.medunes.net/api/region/{$country->code}/all/?key=" . config('nationals.battuta.apiKey'))->get();
 						$result_cities= json_decode($response, true);
 						foreach ($result_cities as $result_city){
 							$added_city = new Region($result_city);
@@ -63,7 +63,7 @@ class AddCitiesCommand extends Command
 					{
 						foreach ($cities as $code){
 							$country = Country::where('code', $code)->get()->first();
-							$response= Curl::to("https://battuta.medunes.net/api/region/{$code}/all/?key=85d97f67ff7fd1935b314ec4f884ad33")->get();
+							$response= Curl::to("https://battuta.medunes.net/api/region/{$code}/all/?key=" . config('nationals.battuta.apiKey'))->get();
 							$result_cities= json_decode($response, true);
 							foreach ($result_cities as $result_city){
 								$added_city = new Region($result_city);
