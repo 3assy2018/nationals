@@ -14,7 +14,7 @@
     "homepage": "https://github.com/3assy2018/nationals",
     "keywords": ["Laravel", "nationals"],
     "require": {
-        "illuminate/support": "~5",
+        "illuminate/support": "~5|~6|~7",
         "ixudra/curl": "6.16.0"
     },
     "require-dev": {
