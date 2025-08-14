@@ -1,11 +1,10 @@
 <?php
 
-namespace m3assy\nationals\console;
+namespace M3assy\Nationals\Console;
 
-use m3assy\nationals\Country;
 use Illuminate\Console\Command;
 use Illuminate\Support\Facades\Artisan;
-use Ixudra\Curl\Facades\Curl;
+use M3assy\Nationals\Country;
 
 class AllCountriesCommand extends Command
 {
@@ -21,7 +20,7 @@ class AllCountriesCommand extends Command
      *
      * @var string
      */
-    protected $description = 'Get All Countries to your database';
+    protected $description = 'Seed all countries into your database';
 
     /**
      * Create a new command instance.
@@ -40,12 +39,11 @@ class AllCountriesCommand extends Command
      */
     public function handle()
     {
-    		Artisan::call("migrate");
-    		$curl_response= Curl::to('http://battuta.medunes.net/api/country/all/?key=' . config('nationals.battuta.apiKey'))->get();
-        $all= json_decode($curl_response, true);
-        foreach ($all as $country){
-        	Country::create($country);
-				}
-        $this->info('Countries Added Successfully');
+        Artisan::call('migrate');
+        $path = config('nationals.data.countries');
+        $all = json_decode(file_get_contents($path), true);
+        foreach ($all as $country) {
+            Country::create($country);
+        }
     }
 }

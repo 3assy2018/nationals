@@ -1,14 +1,15 @@
 <?php
 
-namespace m3assy\nationals;
+namespace M3assy\Nationals;
 
 use Illuminate\Database\Eloquent\Model;
 
 class Country extends Model
 {
-    protected $fillable= ['name', 'code'];
+    protected $fillable = ['name', 'code'];
 
-    public function regions(){
-    	return $this->hasMany('m3assy\nationals\Region');
-		}
+    public function regions()
+    {
+        return $this->hasMany('M3assy\Nationals\Region');
+    }
 }
