@@ -1,10 +1,10 @@
 <?php
 
-namespace m3assy\nationals\Facades;
+namespace M3assy\Nationals\Facades;
 
 use Illuminate\Support\Facades\Facade;
 
-class nationals extends Facade
+class Nationals extends Facade
 {
     /**
      * Get the registered name of the component.
